@@ -1,13 +1,7 @@
 
 def coin_changer(cents_received)
 	
-	coins = {}
-	quarters = {}
-	dimes = {}
-	nickles = {}
-	pennies = {}
-	quarters_and_dimes = {}
-	nickles_and_pennies = {}
+	coins = {}, quarters = {}, dimes = {}, nickles = {}, pennies = {}, quarters_and_dimes = {}, nickles_and_pennies = {}
 	#Creates various empty hashes of different names
 	if cents_received >=25
 	# an if statement is initiated when cents_received(the arguement) is greater than or equal to the number specified	
