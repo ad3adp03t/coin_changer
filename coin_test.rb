@@ -16,4 +16,13 @@ class TestCoinChanger < Minitest::Test
   def test_eight_cents
     assert_equal({nickle:1, penny:3}, coin_changer(8))
   end    
+  def test_ten_cents
+    assert_equal({dime:1}, coin_changer(10))
+  end  
+  def test_fifteen_cents
+    assert_equal({dime:1, nickle:1}, coin_changer(15))
+  end
+  def test_seventeen_cents
+    assert_equal({dime:1, nickle:1, penny:2}, coin_changer(17))
+  end    
 end
