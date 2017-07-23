@@ -2,23 +2,30 @@
 def coin_changer(cents_received)
 	
 	coins = {}
+	quarters = {}
 	dimes = {}
 	nickles = {}
 	pennies = {}
-	dimes_and_nickles = {}
+	quarters_and_dimes = {}
+	nickles_and_pennies = {}
+	if cents_received >=25
+		quarters[:quarters] = cents_received / 25
+		cents_received = cents_received % 25
+	end	
 	if cents_received >=10
-		dimes[:dime] = cents_received / 10
+		dimes[:dimes] = cents_received / 10
 		cents_received = cents_received % 10
 	end	
 	if cents_received >=5
-		nickles[:nickle] = cents_received / 5
+		nickles[:nickles] = cents_received / 5
 		cents_received = cents_received % 5
 	end	
 	if cents_received >=1
-    	pennies[:penny] = cents_received / 1
+    	pennies[:pennies] = cents_received / 1
 	end
-	dimes_and_nickles = dimes.merge(nickles)
-	coins = dimes_and_nickles.merge(pennies)
+	quarters_and_dimes = quarters.merge(dimes)
+	nickles_and_pennies = nickles.merge(pennies)
+	coins = quarters_and_dimes.merge(nickles_and_pennies)
     coins
 
 end    
